@@ -1,0 +1,35 @@
+{
+  "name": "hope-to",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.0.2",
+    "express": "^4.0.0",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^3.6.20",
+    "morgan": "^1.8.2",
+    "socket.io": "^2.0.1",
+    "nodemailer" : "4.0.1",
+    "toolbar": false,
+    "nodemailer-smtp-transport": "latest",
+    "node-rest-client": "1.8.x",
+    "promise": "7.1.x",
+    "underscore": "1.8.x"
+  },
+  "engines": {
+    "node": ">= v0.10.0"
+  },
+  "compilerOptions": {
+        "target": "ES5",
+        "experimentalDecorators": true
+    }
+  "devDependencies": {
+    "chai": "3.5.x",
+    "sinon": "^1.17.3",
+    "mocha": "2.4.x"
+  },
+  "scripts": {
+    "start": "npm install -g mocha && npm install -g jsdox && npm install",
+    "documentation": "jsdox -t docs/templates/ -i README -o docs lib/services",
+    "test": "mocha"
+  }
+}
