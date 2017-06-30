@@ -1,0 +1,63 @@
+<form (ngSubmit)="submitForm()" [formGroup]="contactForm" novalidate>
+  <div class="form-content">
+
+    <label>
+      Domaine D'activité:
+      <select>
+          <option value="agriculture ">Agriculture </option>
+          <option value="animaux">Animaux </option>
+          <option value="architecture">Architecture </option>
+          <option value="domaine_activite.nom_domaine">domaine_activite.nom_domaine.values </option>
+      </select>
+    </label>
+
+    <label>
+      Métier:
+      <select>
+        <optgroup label="primaire">
+          <option value="agriculteur">agriculteur</option>
+          <option value="vigneron">vigneron</option>
+        </optgroup>
+        <optgroup label="secondaire">
+          <option value="ingé">ingé</option>
+          <option value="maçon">maçon</option>
+        </optgroup>
+        <optgroup label="terciere">
+          <option value="commerçant">commerçant</option>
+          <option value="masseur">masseur</option>
+        </optgroup>
+      </select>
+    </label>
+
+    <label>
+      Interet du Métier:
+      <select>
+          <option value="agriculture ">Agriculture </option>
+          <option value="animaux">Animaux </option>
+          <option value="architecture">Architecture </option>
+      </select>
+    </label>
+
+    <label>
+      Statut de L'entreprise:
+      <select>
+          <option value="agriculture ">Agriculture </option>
+          <option value="animaux">Animaux </option>
+          <option value="architecture">Architecture </option>
+      </select>
+    </label>
+
+    <label>
+      Annees D'expériences:
+      <select>
+          <option value="agriculture ">Agriculture </option>
+          <option value="animaux">Animaux </option>
+          <option value="architecture">Architecture </option>
+      </select>
+    </label>
+
+    <div class="form-submit">
+      <button type="submit">S'enregistre</button>
+    </div>
+  </div>
+</form>

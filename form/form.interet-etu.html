@@ -1,0 +1,35 @@
+<form (ngSubmit)="submitForm()" [formGroup]="contactForm" novalidate>
+  <div class="form-content">
+
+    <label>
+      Domaine D'activité:
+      <select>
+          <option value="agriculture ">Agriculture </option>
+          <option value="animaux">Animaux </option>
+          <option value="architecture">Architecture </option>
+      </select>
+    </label>
+
+    <label>
+      Loisir:
+      <select>
+          <option value="cinema ">Cinéma </option>
+          <option value="musique">Musqiue </option>
+          <option value="sport">Sport </option>
+      </select>
+    </label>
+
+    <label>
+      Centre D'Interet:
+      <select>
+          <option value="conseiller ">Aider, conseiller </option>
+          <option value="sensation">Avoir des sensations fortes </option>
+          <option value="architecture">Architecture </option>
+      </select>
+    </label>
+
+    <div class="form-submit">
+      <button type="submit">S'enregistre</button>
+    </div>
+  </div>
+</form>

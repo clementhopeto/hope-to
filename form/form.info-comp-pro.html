@@ -1,0 +1,57 @@
+<h2>Parametre</h2>
+
+<form (ngSubmit)="submitForm()" [formGroup]="contactForm" novalidate>
+  <div class="form-content">
+    <label>
+      Nom:
+      <input type="text" formControlName="name" class="sd-form-control" placeholder="Enter your name.">
+    </label>
+    <label>
+      Prenom:
+      <textarea formControlName="content" class="sd-form-control" placeholder="Prenom here."></textarea>
+    </label>
+    <label>
+      Date de naissance:
+      <input type="date" formControlName="date" class="sd-form-control" placeholder="date de naissance.">
+    </label>
+    <label>
+      Nom de l'entreprise:
+      <input type="text" formControlName="nom entreprise" class="sd-form-control" placeholder="Enter your company name.">
+    </label>
+    <label>
+      N° SIRET:
+      <textarea formControlName="content" class="sd-form-control" placeholder="N° SIRET here."></textarea>
+    </label>
+    <label>
+      Adresse:
+      <input type="text" formControlName="adresse" class="sd-form-control" placeholder="Enter your adresse.">
+    </label>
+    <label>
+      Code Postal:
+      <input type="number" formControlName="cp" class="sd-form-control" placeholder="Enter your code postal." maxlenght="5">
+    </label>
+    <label>
+      Ville:
+      <input type="text" formControlName="ville" class="sd-form-control" placeholder="Enter your ville.">
+    </label>
+    <label>
+      Adresse Mail:
+      <input type="text" formControlName="mail" class="sd-form-control" placeholder="Enter your mail.">
+    </label>
+    <label>
+      Numéro de Téléphone:
+      <input type="number" formControlName="tel" class="sd-form-control" placeholder="Enter your téléphone." maxlenght="10">
+    </label>
+    <label>
+      Login:
+      <input type="text" formControlName="ville" class="sd-form-control" placeholder="Enter your ville.">
+    </label>
+    <label>
+      Mot De Passe:
+      <input type="text" formControlName="mdp" class="sd-form-control" placeholder="Enter your mot de passe.">
+    </label>
+    <div class="form-submit">
+      <button type="submit">Enregistre</button>
+    </div>
+  </div>
+</form>

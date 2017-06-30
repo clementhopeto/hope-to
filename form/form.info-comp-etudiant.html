@@ -1,0 +1,118 @@
+<h2>Parametre</h2>
+
+<div class="jumbotron">
+    <h2>Info complémentaire</h2>
+    <form [formGroup]="infoCompEtudiant" (ngSubmit)="submitForm(infoCompEtudiant.value)">
+      <div class="form-group" [ngClass]="{'has-error':!infoCompEtudiant.controls['prenom'].valid && infoCompEtudiant.controls['prenom'].touched}">
+        <label>Prénom</label>
+        <input class="form-control" type="text" placeholder="John" [formControl]="infoCompEtudiant.controls['prenom']">
+        <!-- The hasError method will tell us if a particular error exists -->
+        <div *ngIf="infoCompEtudiant.controls['prenom'].hasError('required') && infoCompEtudiant.controls['prenom'].touched" class="alert alert-danger">Champ manquant.</div>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error':!infoCompEtudiant.controls['nom'].valid && infoCompEtudiant.controls['nom'].touched}">
+        <label>Nom</label>
+        <input class="form-control" type="text" placeholder="Nom" [formControl]="infoCompEtudiant.controls['nom']">
+        <!-- The hasError method can work with the built in validators but custom validators as well -->
+        <div *ngIf="infoCompEtudiant.controls['nom'].hasError('required') && infoCompEtudiant.controls['nom'].touched" class="alert alert-danger">Champ manquant.</div>
+      </div>
+
+      <div class="form-group" [ngClass]="{'has-error':!infoCompEtudiant.controls['dateNaissance'].valid && infoCompEtudiant.controls['dateNaissance'].touched}">
+        <label>Date de naissance</label>
+        <input class="form-control" type="date" placeholder="Date Naissance" [formControl]="infoCompEtudiant.controls['dateNaissance']">
+        <!-- The hasError method can work with the built in validators but custom validators as well -->
+        <div *ngIf="infoCompEtudiant.controls['dateNaissance'].hasError('required') && infoCompEtudiant.controls['dateNaissance'].touched" class="alert alert-danger">Champ manquant.</div>
+      </div>
+
+      <div class="form-group" [ngClass]="{'has-error':!infoCompEtudiant.controls['mail'].valid && infoCompEtudiant.controls['mail'].touched}">
+        <label>Email</label>
+        <input class="form-control" type="text" placeholder="Mail" [formControl]="infoCompEtudiant.controls['mail']">
+        <!-- The hasError method can work with the built in validators but custom validators as well -->
+        <div *ngIf="infoCompEtudiant.controls['mail'].hasError('required') && infoCompEtudiant.controls['mail'].touched" class="alert alert-danger">Champ manquant.</div>
+      </div>
+
+      <div class="form-group" [ngClass]="{'has-error':!infoCompEtudiant.controls['tel'].valid && infoCompEtudiant.controls['tel'].touched}">
+        <label>Téléphone</label>
+        <input class="form-control" type="number" placeholder="Telephone" [formControl]="infoCompEtudiant.controls['tel']">
+        <!-- The hasError method can work with the built in validators but custom validators as well -->
+        <div *ngIf="infoCompEtudiant.controls['tel'].hasError('required') && infoCompEtudiant.controls['tel'].touched" class="alert alert-danger">Champ manquant.</div>
+      </div>
+
+      <div class="form-group" [ngClass]="{'has-error':!infoCompEtudiant.controls['lycee'].valid && infoCompEtudiant.controls['lycee'].touched}">
+        <label>Lycée</label>
+        <input class="form-control" type="text" placeholder="Lycee" [formControl]="infoCompEtudiant.controls['lycee']">
+        <!-- The hasError method can work with the built in validators but custom validators as well -->
+        <div *ngIf="infoCompEtudiant.controls['lycee'].hasError('required') && infoCompEtudiant.controls['lycee'].touched" class="alert alert-danger">Champ manquant.</div>
+      </div>
+
+      <div class="form-group" [ngClass]="{'has-error':!infoCompEtudiant.controls['ville'].valid && infoCompEtudiant.controls['ville'].touched}">
+        <label>Ville</label>
+        <input class="form-control" type="text" placeholder="Ville" [formControl]="infoCompEtudiant.controls['ville']">
+        <!-- The hasError method can work with the built in validators but custom validators as well -->
+        <div *ngIf="infoCompEtudiant.controls['ville'].hasError('required') && infoCompEtudiant.controls['ville'].touched" class="alert alert-danger">Champ manquant.</div>
+      </div>
+
+      <div class="form-group" [ngClass]="{'has-error':!infoCompEtudiant.controls['grade'].valid && infoCompEtudiant.controls['grade'].touched}">
+        <label>Grade</label>
+        <input class="form-control" type="text" placeholder="Grade" [formControl]="infoCompEtudiant.controls['grade']">
+        <!-- The hasError method can work with the built in validators but custom validators as well -->
+        <div *ngIf="infoCompEtudiant.controls['grade'].hasError('required') && infoCompEtudiant.controls['grade'].touched" class="alert alert-danger">Champ manquant.</div>
+      </div>
+
+      <div class="form-group" [ngClass]="{'has-error':!infoCompEtudiant.controls['filliere'].valid && infoCompEtudiant.controls['filliere'].touched}">
+        <label>Fillière</label>
+        <input class="form-control" type="text" placeholder="Filliere" [formControl]="infoCompEtudiant.controls['filliere']">
+        <!-- The hasError method can work with the built in validators but custom validators as well -->
+        <div *ngIf="infoCompEtudiant.controls['filliere'].hasError('required') && infoCompEtudiant.controls['filliere'].touched" class="alert alert-danger">Champ manquant.</div>
+      </div>
+
+      <div class="form-group">
+        <label>Sexe</label>
+        <div class="alert alert-danger" *ngIf="!infoCompEtudiant.controls['sexe'].valid && infoCompEtudiant.controls['sexe'].touched">You must select a sexe.</div>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="sexe" value="Homme" [formControl]="infoCompEtudiant.controls['sexe']">
+          Homme
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="sexe" value="Femme" [formControl]="infoCompEtudiant.controls['sexe']">
+          Femme
+        </label>
+      </div>
+
+      <div class="form-group" [ngClass]="{'has-error':!infoCompEtudiant.controls['decouverte'].valid && infoCompEtudiant.controls['decouverte'].touched}">
+        <label>Où nous avées vous découvert ?</label>
+        <input class="form-control" type="string" placeholder="Ou nous avees vous decouvert" [formControl]="infoCompEtudiant.controls['decouverte']">
+        <!-- The hasError method can work with the built in validators but custom validators as well -->
+        <div *ngIf="infoCompEtudiant.controls['decouverte'].hasError('required') && infoCompEtudiant.controls['decouverte'].touched" class="alert alert-danger">Champ manquant.</div>
+      </div>
+
+      <div class="form-group">
+      </div>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="conditionGeneral" name="conditionGeneral" [formControl]="infoCompEtudiant.controls['conditionGeneral']"> condition Général
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="newsLetter" name="newsLetter" [formControl]="infoCompEtudiant.controls['newsLetter']"> News Letter
+      </label>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="!infoCompEtudiant.valid">Submit</button>
+      </div>
+    </form>
+  </div>
+
+
+<!-- à lié au bouton submit -->
+<!--
+var Mail = require('../utils/Mail'); //require this module
+Mail.send('[EMAIL TO SEND]', '[TITLE]', '[YOUR HTML TEMPLATE MAIL]', function(err, info) {
+    if(err) {
+        //error
+    }
+    else {
+        //Email has been sent and you can see all information in var info
+    }
+});
+-->

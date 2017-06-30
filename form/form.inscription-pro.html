@@ -1,0 +1,29 @@
+<h2>inscription</h2>
+
+<form (ngSubmit)="submitForm()" [formGroup]="contactForm" novalidate>
+  <div class="form-content">
+    <input type="checkbox" name="entrepreneur" value="entrepreneur"> Je suis commerçant, artisan, profession libérale<br>
+    <input type="checkbox" name="pme" value="pme"> Je suis d’une PME ou d’un Grand Groupe<br>
+    <label>
+      Nom:
+      <input type="text" formControlName="name" class="sd-form-control" placeholder="Enter your name.">
+    </label>
+    <label>
+      Prenom:
+      <textarea formControlName="content" class="sd-form-control" placeholder="Prenom here."></textarea>
+    </label>
+    <label>
+      Email:
+      <input type="email" formControlName="email" class="sd-form-control" placeholder="Enter your email.">
+    </label>
+    <label>
+      N° SIRET:
+      <textarea formControlName="content" class="sd-form-control" placeholder="N° SIRET here."></textarea>
+    </label>
+    <div class="form-submit">
+      <button type="submit">S'inscrire</button>
+      <input type="checkbox" name="condition utilisation" value="condition d'utilisation"> J'ai lu et j'accepte les conditions générales d'utilisation<br>
+      <input type="checkbox" name="news letter" value="news letter"> S'abonner à lanewsletter de Hope To<br>
+    </div>
+  </div>
+</form>
